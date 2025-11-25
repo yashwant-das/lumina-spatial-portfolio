@@ -17,15 +17,15 @@ export const Hero: React.FC<HeroProps> = ({ onExplore }) => {
         className="max-w-4xl mx-auto space-y-8"
       >
         <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-sm font-light text-white/80 tracking-wider uppercase">
-          Digital Craftsman
+          Senior Specialist Quality Engineering
         </div>
         
-        <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 pb-2">
-          Design beyond <br /> dimensions.
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 pb-2">
+          Architecting Quality <br /> at Scale.
         </h1>
         
         <p className="text-xl md:text-2xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed">
-          I build immersive digital experiences that blend spatial design principles with robust engineering.
+          12+ years driving test automation, OTT streaming excellence, and CI/CD innovation for Fortune 500 platforms.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
@@ -34,8 +34,8 @@ export const Hero: React.FC<HeroProps> = ({ onExplore }) => {
               View Work <ArrowRight size={16} />
             </span>
           </GlassButton>
-          <GlassButton onClick={() => console.log('CV Downloaded')}>
-            Download CV
+          <GlassButton onClick={() => window.open('https://www.linkedin.com/in/yashwant-das/', '_blank')}>
+            LinkedIn Profile
           </GlassButton>
         </div>
       </motion.div>

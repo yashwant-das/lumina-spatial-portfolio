@@ -61,14 +61,14 @@ const App: React.FC = () => {
           onClick={() => setActiveSection('home')}
           className="text-2xl font-bold tracking-tight text-white/90 hover:text-white transition-colors"
         >
-          Lumina.
+          Yashwant.
         </button>
       </div>
 
        {/* Top Right Social Links */}
        <div className="fixed top-8 right-8 z-40 hidden md:flex gap-4">
-         <a href="#" className="text-white/60 hover:text-white transition-colors text-sm font-medium">Twitter</a>
-         <a href="#" className="text-white/60 hover:text-white transition-colors text-sm font-medium">LinkedIn</a>
+         <a href="https://www.linkedin.com/in/yashwant-das/" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition-colors text-sm font-medium">LinkedIn</a>
+         <a href="mailto:yashworks@gmail.com" className="text-white/60 hover:text-white transition-colors text-sm font-medium">Email</a>
        </div>
     </div>
   );
