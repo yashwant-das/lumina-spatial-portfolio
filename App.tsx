@@ -36,16 +36,16 @@ const App: React.FC = () => {
   return (
     <div className="relative min-h-screen font-sans selection:bg-white/30 selection:text-white">
       <Background />
-      
+
       {/* Main Content Area */}
       <main className="relative z-10 pb-32">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}
-            initial={{ opacity: 0, scale: 0.98, filter: 'blur(10px)' }}
-            animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
-            exit={{ opacity: 0, scale: 1.02, filter: 'blur(10px)' }}
-            transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.02 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           >
             {renderSection()}
           </motion.div>
@@ -54,10 +54,10 @@ const App: React.FC = () => {
 
       {/* Floating Navigation Dock */}
       <Dock activeSection={activeSection} setActiveSection={setActiveSection} />
-      
+
       {/* Top Left Branding */}
       <div className="fixed top-8 left-8 z-40 hidden md:block">
-        <button 
+        <button
           onClick={() => setActiveSection('home')}
           className="text-2xl font-bold tracking-tight text-white/90 hover:text-white transition-colors"
         >
@@ -65,11 +65,11 @@ const App: React.FC = () => {
         </button>
       </div>
 
-       {/* Top Right Social Links */}
-       <div className="fixed top-8 right-8 z-40 hidden md:flex gap-4">
-         <a href="https://www.linkedin.com/in/yashwant-das/" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition-colors text-sm font-medium">LinkedIn</a>
-         <a href="mailto:yashworks@gmail.com" className="text-white/60 hover:text-white transition-colors text-sm font-medium">Email</a>
-       </div>
+      {/* Top Right Social Links */}
+      <div className="fixed top-8 right-8 z-40 hidden md:flex gap-4">
+        <a href="https://www.linkedin.com/in/yashwant-das/" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition-colors text-sm font-medium">LinkedIn</a>
+        <a href="mailto:yashworks@gmail.com" className="text-white/60 hover:text-white transition-colors text-sm font-medium">Email</a>
+      </div>
     </div>
   );
 };
